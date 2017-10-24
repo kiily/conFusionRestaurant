@@ -28,3 +28,13 @@
     margin: 0px;
     color: #0f0f0f;
 }
+
+/* Avoid navbar going over jumbotron, give padding for a fixed top navbar */
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-inverse{
+    background-color: #512DA8;
+}
