@@ -24,23 +24,24 @@
     a toggleable navbar for screen sizes sm and below; fixed-top fixes the navbar to the top of the page-->
     <nav class="navbar navbar-inverse navbar-toggleable-sm fixed-top">
         <div class="container">
-            
-               
-                <!-- Adding the toggle button; data-toggle is a Bootstrap JS component  -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span class="navbar-toggler-icon"></span>
+
+
+            <!-- Adding the toggle button; data-toggle is a Bootstrap JS component  -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="znavbar-toggler-icon"></span>
                 </button>
-                 <!-- Branding information with this class -->
-                 <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
-                <div class="collapse navbar-collapse" id="Navbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-                    </ul>
-                </div>
-            
+            <!-- Branding information with this class -->
+            <!-- Logo size adapted to navbar-brand -->
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+            </div>
+
         </div>
     </nav>
 
@@ -52,7 +53,8 @@
                     <p class="hidden-xs-down">We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking
                         creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col col-sm">
+                <div class="col col-sm align-self-center">
+                    <img src="img/logo.png" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -68,9 +70,21 @@
             </div>
             <div class="col-sm pull-sm-4 col-md pull-md-3">
                 <!-- <div class="col-sm pull-sm-4 col-md flex-first"> -->
-                <h2>Uthappizza</h2>
-                <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine
-                    cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                <!-- Adding media object -->
+                <div class="media">
+                    <!-- Use image in media object requires flex related classes and margin right 3 so that
+                    the description is slightly separated from the image itself -->
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png"
+                    alt="uthappiza">
+                    <div class="media-body">
+                        <!-- Align the title to top of media object with mt-0 -->
+                            <h2 class="mt-0">Uthappizza</h2>
+                            <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe
+                                vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                    </div>
+                    
+                </div>
+
             </div>
         </div>
 
@@ -94,10 +108,17 @@
             </div>
             <div class="col-sm pull-sm-4 col-md pull-md-3">
                 <!-- <div class="col-sm pull-sm-4 col-md flex-first"> -->
-                <h2>Alberto Somayya</h2>
-                <h4>Executive Chef</h4>
-                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who
-                    in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                <div class="media">
+                <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="alberto somayya">
+                <div class="media-body">
+                        <h2>Alberto Somayya</h2>
+                        <h4>Executive Chef</h4>
+                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who
+                            in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                </div>
+                       
+                </div>
+               
             </div>
         </div>
     </div>
@@ -127,7 +148,7 @@
                         <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
                         <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
                         <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
             </div>
