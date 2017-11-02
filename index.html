@@ -28,7 +28,7 @@
 
             <!-- Adding the toggle button; data-toggle is a Bootstrap JS component  -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span class="znavbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
             <!-- Branding information with this class -->
             <!-- Logo size adapted to navbar-brand -->
@@ -48,13 +48,18 @@
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
-                <div class="col-12 col-sm-8">
+                <div class="col-12 col-sm-6 align-self-center">
                     <h1>Ristorante con Fusion</h1>
-                    <p class="hidden-xs-down">We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking
                         creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid">
+                </div>
+                <!-- Btn block here -->
+                <div class="col-12 col-sm-3 align-self-center">
+                    <!-- Linking to the form via the id - goes to bottom of the page -->
+                    <a class="btn btn-block btn-small btn-warning" href="./#reserve">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -97,15 +102,22 @@
                 <h3>This Month's Promotions</h3>
             </div>
             <div class="col-sm col-md">
-                <h2>Weekend Grand Buffet</h2>
-                <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
-                    main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
-                    person </p>
+                <div class="media">
+                
+                <div class="media-body">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                        <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six
+                            main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per
+                            person </p>
+                </div>
+                <img src="img/buffet.png" class="d-flex ml-3 img-thumbnail align-self-center">
+                
+            </div>
             </div>
         </div>
 
         <div class="row row-content align-items-center">
-            <div class="col-sm-4  push-sm-8 col-md-3 push-md-9">
+            <div class="col-sm-4 push-sm-8 col-md-3 push-md-9">
                 <!-- <div class="col-sm-4  push-sm-8 col-md-3 flex-last"> -->
                 <h3>Meet our Culinary Specialists</h3>
             </div>
@@ -113,16 +125,95 @@
                 <!-- <div class="col-sm pull-sm-4 col-md flex-first"> -->
                 <div class="media">
                 <img src="img/alberto.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="alberto somayya">
-                <div class="media-body">
+                <div class="media-body ">
                         <h2 class="mt-0">Alberto Somayya</h2>
                         <h4>Executive Chef</h4>
-                        <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who
+                        <p class="hidden-xs-down">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who
                             in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                 </div>
                        
                 </div>
                
             </div>
+        </div>
+        <!-- ROW for form goes here; centered and occupies 8 columns in small to higher; for xs make it the full page -->
+        <div class="row row-content align-items-center" id="reserve">
+            <div class="col-12 col-sm-8 offset-sm-2">
+                <div class="card">
+                    <h3 class="card-header bg-warning text-white">Reserve a table</h3>
+                    <div class="card-block">
+                            <form>
+                                    <div class="form-group row">
+                                    <label for="guests" class="col-md-2 col-form-label"><strong>Number of Guests</strong></label>
+                                    <div class="col-md-10 ">
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class=" form-check-input" type="radio" name="guests" id="guests"
+                                                value="1">1
+                                            </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">                                  
+                                                <input class="form-check-input" type="radio" name="guests" id="guests"
+                                                value="2">2 
+                                                </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests"
+                                                value="3">3 
+                                                </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests"
+                                                value="4">4 
+                                                </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests"
+                                                value="5">5 
+                                                </label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                                <label class="form-check-label">
+                                                <input class="form-check-input" type="radio" name="guests" id="guests"
+                                                value="6">6 
+                                                </label>
+                                        </div>
+                                       
+                                    
+                                    </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="date" class="col-md-2 col-form-label"><strong>Date and Time</strong></label>
+                                        <div class="col-6 col-sm-4">
+                                                <div class="input-group">
+                                                        <div class="input-group-addon"><span class="fa fa-calendar fa-lg"></span></div>
+                                                        <input type="text" id="date" name="date" class="form-control" placeholder="Date">
+                                                </div>
+                                        </div>
+                                        <div class="col-6 col-sm-4">
+                                                <div class="input-group">
+                                                        <div class="input-group-addon"><span class="fa fa-clock-o fa-lg"></span></div>
+                                                        <input type="text" id="time" name="time" class="form-control" placeholder="Time">
+                                                </div>
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="form-group row">
+                                            <div class="offset-md-2 col-md-10">
+                                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                                </div>
+                                    </div>
+                                </form>
+                    </div>
+
+                        
+                </div>
+           
+        </div>
         </div>
     </div>
 
