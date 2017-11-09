@@ -64,7 +64,13 @@ body{
 }
 
 /* Styles for pause/play buttons of the carousel; put buttons in bottom right corner of carousel */
-#carouselButtons{
+/* #carouselButtons{
+    right: 0px;
+    position: absolute;
+    bottom: 0px;
+} */
+
+#carousel-button{
     right: 0px;
     position: absolute;
     bottom: 0px;

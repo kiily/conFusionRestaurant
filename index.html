@@ -282,15 +282,19 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <!-- Add new buttons to stop/start sliding behavior -->
-                    <div class="btn-group" id="carouselButtons">
+                    <!-- Add new buttons to stop/start sliding behavior, then collapse them so only the 
+                    relevant one shows -->
+                    <!-- Initial code: <div class="btn-group" id="carouselButtons">
                         <button class="btn btn-danger btn-sm" id="carousel-pause">
                             <span class="fa fa-pause"></span>
                         </button>
                         <button class="btn btn-danger btn-sm" id="carousel-play">
                             <span class="fa fa-play"></span>
                         </button>
-                    </div>
+                    </div> -->
+                    <button class="btn btn-danger btn-sm" id="carousel-button">
+                            <span class="fa fa-pause"></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -442,17 +446,35 @@
             $(document).ready(function(){
                 //set sliding interval to 2000ms
                 $("#mycarousel").carousel({interval: 2000});
-                $("#carousel-pause").click(function(){
-                    $("#mycarousel").carousel('pause');
+                $("#carousel-button").click(function(){
+                    //if there is an element with the span tag and a pause button
+                    if($("#carousel-button").children("span").hasClass("fa-pause")){
+                        //currently active as pause button
+                        $("#mycarousel").carousel('pause');
+                        $('#carousel-button').children("span").removeClass("fa-pause");
+                        $('#carousel-button').children("span").addClass("fa-play");
+
+                    }
+
+                    else if($("#carousel-button").children("span").hasClass("fa-play")){
+                        //currently active as play button
+                        $("#mycarousel").carousel('cycle');
+                        $('#carousel-button').children("span").removeClass("fa-play");
+                        $('#carousel-button').children("span").addClass("fa-pause");
+
+                    }
+
+
                 });
 
-                $("#carousel-play").click(function(){
-                    $("#mycarousel").carousel('cycle');
-                });
+                //not needed after the buttons are collapsed
+                // $("#carousel-play").click(function(){
+                //     $("#mycarousel").carousel('cycle');
+                // });
             });
         
         </script>
-        <!-- Script wiht Jquery syntx -->
+        <!-- Script wiht Jquery syntax for tooltips -->
         <script>
             // When document ready, invoke the function
             // $(document).ready(function () {
