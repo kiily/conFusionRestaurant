@@ -22,7 +22,7 @@ S
         }
 
 
-    });
+    }); 
 
     //not needed after the buttons are collapsed
     // $("#carousel-play").click(function(){
