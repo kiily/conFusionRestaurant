@@ -441,39 +441,8 @@
         <script src="node_modules/jquery/dist/jquery.min.js"></script>
         <script src="node_modules/tether/dist/js/tether.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- Carousel button behavior script -->
-        <script>
-            $(document).ready(function(){
-                //set sliding interval to 2000ms
-                $("#mycarousel").carousel({interval: 2000});
-                $("#carousel-button").click(function(){
-                    //if there is an element with the span tag and a pause button
-                    if($("#carousel-button").children("span").hasClass("fa-pause")){
-                        //currently active as pause button
-                        $("#mycarousel").carousel('pause');
-                        $('#carousel-button').children("span").removeClass("fa-pause");
-                        $('#carousel-button').children("span").addClass("fa-play");
-
-                    }
-
-                    else if($("#carousel-button").children("span").hasClass("fa-play")){
-                        //currently active as play button
-                        $("#mycarousel").carousel('cycle');
-                        $('#carousel-button').children("span").removeClass("fa-play");
-                        $('#carousel-button').children("span").addClass("fa-pause");
-
-                    }
-
-
-                });
-
-                //not needed after the buttons are collapsed
-                // $("#carousel-play").click(function(){
-                //     $("#mycarousel").carousel('cycle');
-                // });
-            });
-        
-        </script>
+        <script src="js/scripts.js"></script>
+        <!-- Carousel button behavior script moved to new file-->
         <!-- Script wiht Jquery syntax for tooltips -->
         <script>
             // When document ready, invoke the function
