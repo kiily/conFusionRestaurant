@@ -7,7 +7,7 @@ module.exports = function (grunt) {
     //plugins is specific to each plugin (see official documentation for each)
 
     require('time-grunt')(grunt);
-    require('jit-grunt')(grunt,{
+    require('jit-grunt')(grunt, {
         useminPrepare: 'grunt-usemin'
     });
 
@@ -61,6 +61,7 @@ module.exports = function (grunt) {
             },
             fonts: {
                 files: [{
+                    //enable dynamic expansion
                     expand: true,
                     dot: true,
                     cwd: 'node_modules/font-awesome',
@@ -72,7 +73,7 @@ module.exports = function (grunt) {
         //clean task
         clean: {
             build: {
-                src: ['dist/']
+                src: ['dist/*']
             }
         },
         //image minification and compression
@@ -92,18 +93,18 @@ module.exports = function (grunt) {
                 dest: 'dist',
                 src: ['contactus.html', 'aboutus.html', 'index.html']
             },
-            options:{
+            options: {
                 //configuration found by trial and error
-                flow :{
-                    steps:{
+                flow: {
+                    steps: {
                         css: ['cssmin'],
                         js: ['uglify']
                     },
                     post: {
                         //supply options to subtasks
-                       css: [{
+                        css: [{
                             name: 'cssmin',
-                            createConfig: function(context, block){
+                            createConfig: function (context, block) {
                                 //specify JS object with options property to be passed to cssmin task by usemin
                                 //this avoids font awesome breaking
                                 var generated = context.options.generated;
@@ -116,13 +117,14 @@ module.exports = function (grunt) {
                     }
                 }
             }
-        }, 
+        },
         //note how everything below here is done directly on the dist folder
         //concatenation;
         concat: {
-            options:{
+            options: {
                 separator: ';'
             },
+            //dist configuration is provided in usemin
             dist: {}
         },
         //uglify
@@ -130,13 +132,13 @@ module.exports = function (grunt) {
             dist: {}
         },
         //css minification
-        cssmin:{
-            dist:{}
+        cssmin: {
+            dist: {}
         },
         //filerev (file revision) -- when usemin prepares main.css and main.js files it adds an additional extension to the main name
         //when we make a new version we can avoid cached pages to be reloaded; the css and js will have a numeric extension
         filerev: {
-            options:{
+            options: {
                 encoding: 'utf-8',
                 algorithm: 'md5',
                 length: 20
@@ -144,14 +146,17 @@ module.exports = function (grunt) {
             //specify the files on which filerev should act
             release: {
                 files: [{
-                    src: ['dist/css/*.css']
+                    src: [
+                        'dist/css/*.css',
+                        'dist/js/*.js'
+                    ]
                 }]
             }
         },
         //configure the usemin task
-        usemin:{
+        usemin: {
             html: ['dist/contactus.html', 'dist/aboutus.html', 'dist/index.html'],
-            options:{
+            options: {
                 //specify assets directory
                 assetsDir: ['dist', 'dist/css', 'dist/js']
             }
@@ -168,7 +173,7 @@ module.exports = function (grunt) {
 
     //specify tasks in the right sequence
     grunt.registerTask('build', [
-        'clean',
+        // 'clean',
         'copy',
         'imagemin',
         'useminPrepare',
