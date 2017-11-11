@@ -34,8 +34,10 @@ $carousel-item-height: 300px;
     color: floralwhite;
 }
 
-.modal {
+.modal-dialog {
 
+    background: $background-dark;
+    
     .modal-header {
         background: $background-dark;
         color: floralwhite;

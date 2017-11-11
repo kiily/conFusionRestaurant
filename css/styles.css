@@ -19,17 +19,17 @@
   background: #9575CD;
   color: floralwhite; }
 
-.modal .modal-header {
-  background: #512DA8;
-  color: floralwhite; }
-  .modal .modal-header .close {
+.modal-dialog {
+  background: #512DA8; }
+  .modal-dialog .modal-header {
+    background: #512DA8;
     color: floralwhite; }
-
-.modal .modal-body {
-  background: #D1C4E9; }
-
-.modal .modal-footer {
-  background: #9575CD; }
+    .modal-dialog .modal-header .close {
+      color: floralwhite; }
+  .modal-dialog .modal-body {
+    background: #D1C4E9; }
+  .modal-dialog .modal-footer {
+    background: #9575CD; }
 
 .address {
   font-size: 80%;
