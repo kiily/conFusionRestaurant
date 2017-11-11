@@ -57,7 +57,7 @@
                     </li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="login">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -72,7 +72,7 @@
                 <div class="modal-header">
                     <h3 class="modal-title">Reserve a table</h3>
                     <!-- Cross Button dismisses the modal when clicked -->
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close">
                         &times;
                     </button>
                 </div>
@@ -224,7 +224,7 @@
                     that the content can be styled with html; title - tooltip contents -->
                     <!-- <a class="btn btn-block btn-small btn-warning" href="./#reserve" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>"
                         data-placement="bottom">Reserve Table</a> -->
-                        <a class="btn btn-block btn-small btn-warning" data-toggle="modal" data-target="#reserveModal" >
+                        <a class="btn btn-block btn-small btn-warning" type="button" id="reserve" >
                             Reserve Table</a>
                 </div>
             </div>

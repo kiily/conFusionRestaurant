@@ -29,3 +29,23 @@ S
     //     $("#mycarousel").carousel('cycle');
     // });
 });
+
+
+//toggle login modal
+$('#login').click(function(){
+    $('#loginModal').modal('show');
+
+    $('.close').click(function(){
+        $('#loginModal').modal('hide');
+    })
+});
+
+
+//toggle reserve modal
+$('#reserve').click(function(){
+    $('#reserveModal').modal('show');
+
+    $('.close').click(function(){
+        $('#reserveModal').modal('hide');
+    })
+});
